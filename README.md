@@ -1,0 +1,2 @@
+# gusture-recognition
+使用OpenCV进行图片视觉化处理，tensorflow进行神经网络智能识别
