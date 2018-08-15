@@ -270,7 +270,7 @@ def test(X_test, y_test):
                 # 得到迭代轮数
                 # global_step = ckpt.model_checkpoint_path.split('/')[-1].split('-')[-1] # model.ckpt-3000
                 for _ in range(X_test.shape[0]):
-                    xs, ys = get_batch(X_test, y_test, batch_size=1) # 测试用
+                    xs, ys = get_batch(X_test, y_test, batch_size=batch_size) # 测试用
                     print(ys)
                     label, accuracy_score = sess.run([y_, accuracy], feed_dict={x: xs, y: ys})
                     print("实际手势： %s，  预测手势： %s" % (output[np.argmax(ys)], output[np.argmax(label)]))
